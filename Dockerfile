@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy project files
-COPY . /app
+RUN git clone https://github.com/3choff/FastWhisperAPI.git .
 
 # Install Python dependencies
 RUN pip install --no-cache-dir fastapi uvicorn faster-whisper torch
