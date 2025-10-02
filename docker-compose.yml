@@ -2,10 +2,10 @@ version: "3.8"
 
 services:
   fastwhisperapi:
-    image: fastwhisperapi:latest
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile   # usa il Dockerfile CPU-only
+    image: fastwhisperapi:cpu
     container_name: fastwhisperapi
     environment:
       - API_KEY=dummy_api_key   # cambia con la tua chiave API
