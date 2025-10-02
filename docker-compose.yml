@@ -1,0 +1,19 @@
+```yaml
+version: "3.8"
+
+services:
+  fastwhisperapi:
+    image: fastwhisperapi:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastwhisperapi
+    environment:
+      - API_KEY=dummy_api_key   # cambia con la tua chiave API
+      - FORCE_CPU=true          # forza l'uso della CPU
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models    # opzionale: persistenza modelli
+    restart: unless-stopped
+```
