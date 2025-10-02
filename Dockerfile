@@ -13,7 +13,7 @@ WORKDIR /app
 RUN git clone https://github.com/3choff/FastWhisperAPI.git .
 
 # Install Python dependencies
-RUN pip install --no-cache-dir fastapi uvicorn faster-whisper torch
+RUN pip install --no-cache-dir fastapi uvicorn faster-whisper torch python-multipart
 
 # Expose API port
 EXPOSE 8000
