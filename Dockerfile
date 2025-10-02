@@ -6,7 +6,7 @@ WORKDIR /app
 
 ADD . /app
 
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install --no-cache-dir fastapi faster_whisper torch
 
 EXPOSE 8000
 
